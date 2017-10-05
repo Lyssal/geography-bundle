@@ -9,7 +9,6 @@
     <services>
     	  <service id="lyssal.geography.command.database.fille" class="%lyssal.geography.command.database.fill.class%">
             <argument type="service" id="doctrine" />
-            <argument type="service" id="file_locator" />
             <argument type="service" id="lyssal.geography.manager.country" />
             <argument type="service" id="lyssal.geography.manager.administrative_area" />
             <argument type="service" id="lyssal.geography.manager.sub_administrative_area" />

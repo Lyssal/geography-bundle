@@ -36,11 +36,6 @@ class FillCommand extends Command
     private $doctrine;
 
     /**
-     * @var \Symfony\Component\Config\FileLocatorInterface FileLocator
-     */
-    private $fileLocator;
-
-    /**
      * @var \Lyssal\GeographyBundle\Manager\CountryManager The manager of Country
      */
     private $countryManager;
@@ -100,7 +95,6 @@ class FillCommand extends Command
      * Constructeur
      *
      * @param \Symfony\Bridge\Doctrine\RegistryInterface $doctrine Doctrine
-     * @param \Symfony\Component\Config\FileLocatorInterface $fileLocator FileLocator
      * @param \Lyssal\GeographyBundle\Manager\CountryManager $countryManager CountryManager
      * @param \Lyssal\GeographyBundle\Manager\AdministrativeAreaManager $administrativeAreaManager AdministrativeAreaManager
      * @param \Lyssal\GeographyBundle\Manager\SubAdministrativeAreaManager $subAdministrativeAreaManager SubAdministrativeAreaManager
@@ -108,7 +102,6 @@ class FillCommand extends Command
      * @param \Lyssal\GeographyBundle\Manager\PostalCodeManager $postalCodeManager PostalCodeManager
      */
     public function __construct(RegistryInterface $doctrine,
-        FileLocatorInterface $fileLocator,
         CountryManager $countryManager,
         AdministrativeAreaManager $administrativeAreaManager,
         SubAdministrativeAreaManager $subAdministrativeAreaManager,
@@ -116,7 +109,6 @@ class FillCommand extends Command
         PostalCodeManager $postalCodeManager
     ) {
         $this->doctrine = $doctrine;
-        $this->fileLocator = $fileLocator;
         $this->countryManager = $countryManager;
         $this->administrativeAreaManager = $administrativeAreaManager;
         $this->subAdministrativeAreaManager = $subAdministrativeAreaManager;
