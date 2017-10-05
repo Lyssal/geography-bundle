@@ -2,7 +2,8 @@
 
 The Lyssal geography bundle permits to use and manipulate geographic data and langugages.
 
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/ee28a3ce-401b-4b08-9f4e-71f5d738da10/small.png)](https://insight.sensiolabs.com/projects/ee28a3ce-401b-4b08-9f4e-71f5d738da10)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/cd04ed28-e578-4e99-8f3d-bc911e323b96/small.png)](https://insight.sensiolabs.com/projects/cd04ed28-e578-4e99-8f3d-bc911e323b96)
+
 
 ## Installation
 
