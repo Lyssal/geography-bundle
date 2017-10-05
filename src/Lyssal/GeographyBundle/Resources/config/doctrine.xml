@@ -7,7 +7,7 @@
         <parameter key="lyssal.geography.command.database.fill.class">Lyssal\GeographyBundle\Command\Database\FillCommand</parameter>
     </parameters>
     <services>
-    	  <service id="lyssal.geography.command.database.fille" class="%lyssal.geography.command.database.fill.class%">
+    	  <service id="lyssal.geography.command.database.fill" class="%lyssal.geography.command.database.fill.class%">
             <argument type="service" id="doctrine" />
             <argument type="service" id="lyssal.geography.manager.country" />
             <argument type="service" id="lyssal.geography.manager.administrative_area" />
