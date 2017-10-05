@@ -1,0 +1,25 @@
+{
+	"name" : "lyssal/geography-bundle",
+	"description" : "A Symfony bundle to manage geographic entities like cities or countries.",
+	"license" : "proprietary",
+	"keywords" : [
+		"geography",
+		"city",
+		"country",
+		"region"
+	],
+	"type" : "symfony-bundle",
+	"authors" : [{
+			"name" : "Rémi Leclerc",
+			"homepage" : "http://www.lyssal.com/"
+		}
+	],
+	"require" : {
+		"lyssal/geography" : "~0.1"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"Lyssal\\GeographyBundle" : "src"
+		}
+	}
+}

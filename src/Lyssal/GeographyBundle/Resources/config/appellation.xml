@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.geography.appellation.postal_code.class">Lyssal\GeographyBundle\Appellation\PostalCodeAppellation</parameter>
+        <parameter key="lyssal.geography.appellation.sub_administrative_area.class">Lyssal\GeographyBundle\Appellation\SubAdministrativeAreaAppellation</parameter>
+        <parameter key="lyssal.geography.appellation.language.class">Lyssal\GeographyBundle\Appellation\LanguageAppellation</parameter>
+        <parameter key="lyssal.geography.appellation.country.class">Lyssal\GeographyBundle\Appellation\CountryAppellation</parameter>
+        <parameter key="lyssal.geography.appellation.administrative_area.class">Lyssal\GeographyBundle\Appellation\AdministrativeAreaAppellation</parameter>
+        <parameter key="lyssal.geography.appellation.city.class">Lyssal\GeographyBundle\Appellation\CityAppellation</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.geography.appellation.postal_code" class="%lyssal.geography.appellation.postal_code.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+        <service id="lyssal.geography.appellation.sub_administrative_area" class="%lyssal.geography.appellation.sub_administrative_area.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+        <service id="lyssal.geography.appellation.language" class="%lyssal.geography.appellation.language.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+        <service id="lyssal.geography.appellation.country" class="%lyssal.geography.appellation.country.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+        <service id="lyssal.geography.appellation.administrative_area" class="%lyssal.geography.appellation.administrative_area.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+        <service id="lyssal.geography.appellation.city" class="%lyssal.geography.appellation.city.class%">
+            <argument type="service" id="router" />
+            <tag name="lyssal.appellation" />
+        </service>
+    </services>
+
+</container>

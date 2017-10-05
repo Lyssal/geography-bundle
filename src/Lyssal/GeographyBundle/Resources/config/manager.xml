@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.geography.manager.postal_code.class">Lyssal\GeographyBundle\Manager\PostalCodeManager</parameter>
+        <parameter key="lyssal.geography.manager.sub_administrative_area.class">Lyssal\GeographyBundle\Manager\SubAdministrativeAreaManager</parameter>
+        <parameter key="lyssal.geography.manager.language.class">Lyssal\GeographyBundle\Manager\LanguageManager</parameter>
+        <parameter key="lyssal.geography.manager.country.class">Lyssal\GeographyBundle\Manager\CountryManager</parameter>
+        <parameter key="lyssal.geography.manager.administrative_area.class">Lyssal\GeographyBundle\Manager\AdministrativeAreaManager</parameter>
+        <parameter key="lyssal.geography.manager.city.class">Lyssal\GeographyBundle\Manager\CityManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.geography.manager.postal_code" class="%lyssal.geography.manager.postal_code.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.postal_code.class%</argument>
+        </service>
+        <service id="lyssal.geography.manager.sub_administrative_area" class="%lyssal.geography.manager.sub_administrative_area.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.sub_administrative_area.class%</argument>
+        </service>
+        <service id="lyssal.geography.manager.language" class="%lyssal.geography.manager.language.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.language.class%</argument>
+        </service>
+        <service id="lyssal.geography.manager.country" class="%lyssal.geography.manager.country.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.country.class%</argument>
+        </service>
+        <service id="lyssal.geography.manager.administrative_area" class="%lyssal.geography.manager.administrative_area.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.administrative_area.class%</argument>
+        </service>
+        <service id="lyssal.geography.manager.city" class="%lyssal.geography.manager.city.class%">
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%lyssal.geography.entity.city.class%</argument>
+        </service>
+    </services>
+
+</container>

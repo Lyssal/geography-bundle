@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="lyssal.geography.decorator.postal_code.class">Lyssal\GeographyBundle\Decorator\PostalCodeDecorator</parameter>
+        <parameter key="lyssal.geography.decorator.sub_administrative_area.class">Lyssal\GeographyBundle\Decorator\SubAdministrativeAreaDecorator</parameter>
+        <parameter key="lyssal.geography.decorator.language.class">Lyssal\GeographyBundle\Decorator\LanguageDecorator</parameter>
+        <parameter key="lyssal.geography.decorator.country.class">Lyssal\GeographyBundle\Decorator\CountryDecorator</parameter>
+        <parameter key="lyssal.geography.decorator.administrative_area.class">Lyssal\GeographyBundle\Decorator\AdministrativeAreaDecorator</parameter>
+        <parameter key="lyssal.geography.decorator.city.class">Lyssal\GeographyBundle\Decorator\CityDecorator</parameter>
+    </parameters>
+
+    <services>
+        <service id="lyssal.geography.decorator.postal_code" class="%lyssal.geography.decorator.postal_code.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+        <service id="lyssal.geography.decorator.sub_administrative_area" class="%lyssal.geography.decorator.sub_administrative_area.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+        <service id="lyssal.geography.decorator.language" class="%lyssal.geography.decorator.language.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+        <service id="lyssal.geography.decorator.country" class="%lyssal.geography.decorator.country.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+        <service id="lyssal.geography.decorator.administrative_area" class="%lyssal.geography.decorator.administrative_area.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+        <service id="lyssal.geography.decorator.city" class="%lyssal.geography.decorator.city.class%">
+            <argument type="service" id="lyssal.decorator" />
+            <tag name="lyssal.decorator" />
+        </service>
+    </services>
+
+</container>
