@@ -30,7 +30,7 @@ abstract class PostalCode
     /**
      * @var \Doctrine\Common\Collections\Collection The cities
      *
-     * @ORM\ManyToMany(targetEntity="City", inversedBy="codePostaux", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="City", inversedBy="postalCodes", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
      */
     protected $cities;

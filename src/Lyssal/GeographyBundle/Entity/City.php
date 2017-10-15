@@ -46,7 +46,7 @@ abstract class City
     /**
      * @var \Doctrine\Common\Collections\ArrayCollection The postal codes
      *
-     * @ORM\ManyToMany(targetEntity="PostalCode", mappedBy="city", cascade={"persist"})
+     * @ORM\ManyToMany(targetEntity="PostalCode", mappedBy="cities", cascade={"persist"})
      */
     protected $postalCodes;
 
