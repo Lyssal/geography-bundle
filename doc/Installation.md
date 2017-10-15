@@ -51,14 +51,7 @@ use Doctrine\ORM\Mapping\UniqueConstraint;
  * {@inheritDoc}
  * 
  * @ORM\Entity()
- * @ORM\Table
- * (
- *     uniqueConstraints=
- *     {
- *         @UniqueConstraint(name="CODE_ALPHA_2", columns={ "code_alpha_2" }),
- *         @UniqueConstraint(name="CODE_ALPHA_3", columns={ "code_alpha_3" })
- *     }
- * )
+ * @ORM\Table()
  */
 class Country extends LyssalCountry
 {
@@ -111,13 +104,7 @@ use Doctrine\ORM\Mapping\UniqueConstraint;
  * {@inheritDoc}
  * 
  * @ORM\Entity(repositoryClass="\Lyssal\GeographyBundle\Repository\SubAdministrativeAreaRepository")
- * @ORM\Table
- * (
- *     uniqueConstraints=
- *     {
- *         @UniqueConstraint(name="REGION_CODE", columns={ "administrativeArea_id", "subAdministrativeArea_code" })
- *     }
- * )
+ * @ORM\Table()
  */
 class SubAdministrativeArea extends LyssalSubAdministrativeArea
 {
