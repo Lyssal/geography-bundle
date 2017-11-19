@@ -15,6 +15,7 @@
 		}
 	],
 	"require" : {
+		"lyssal/doctrine-orm" : "~0.1",
 		"lyssal/geography" : "~0.1"
 	},
 	"autoload" : {
