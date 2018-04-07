@@ -17,7 +17,7 @@ All entities have an entity manager (if you use `LyssalDoctrineOrmBundle`), a de
 Entities are:
 
 * Country
-* AdministrativeArea (for statesn, French regions, etc)
+* AdministrativeArea (for states, French regions, etc)
 * SubAdministrativeArea (for counties, French departments, etc)
 * City
 * PostalCode
