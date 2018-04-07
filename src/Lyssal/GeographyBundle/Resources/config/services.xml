@@ -5,7 +5,6 @@
         <import resource="manager.xml"/>
         <import resource="decorator.xml"/>
         <import resource="appellation.xml"/>
-        <import resource="sonata.xml"/>
     </imports>
     <parameters>
         <parameter key="lyssal.geography.entity.administrative_area.class">Lyssal\GeographyBundle\Entity\AdministrativeArea</parameter>

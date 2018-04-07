@@ -10,11 +10,6 @@ The Lyssal geography bundle permits to use and manipulate geographic data and la
 Read the [installation documentation](doc/Installation.md).
 
 
-## Optional
-
-* [SonataAdmin](doc/Sonata.md)
-
-
 ## Entities
 
 All entities have an entity manager (if you use `LyssalDoctrineOrmBundle`), a decorator and an appellation (if you use `LyssalEntityBundle`), and an admin (if you use `SonataAdmin`).
