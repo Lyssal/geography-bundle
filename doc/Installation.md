@@ -208,13 +208,13 @@ If you use the entity managers of `LyssalDoctrineOrmBundle` :
 
 ```yml
 imports:
-    - { resource: "@LyssalGeographyBundle/Resources/config/config/doctrine.xml" }
+    - { resource: "@LyssalGeographyBundle/Resources/config/services/doctrine.xml" }
 ```
 
 If you use `LyssalEntityBundle` :
 
 ```yml
 imports:
-    - { resource: "@LyssalGeographyBundle/Resources/config/config/appellation.xml" }
-    - { resource: "@LyssalGeographyBundle/Resources/config/config/decorator.xml" }
+    - { resource: "@LyssalGeographyBundle/Resources/config/services/appellation.xml" }
+    - { resource: "@LyssalGeographyBundle/Resources/config/services/decorator.xml" }
 ```

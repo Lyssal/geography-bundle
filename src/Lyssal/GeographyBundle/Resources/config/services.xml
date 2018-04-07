@@ -1,11 +1,5 @@
 <?xml version="1.0" ?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-    <imports>
-        <import resource="doctrine.xml"/>
-        <import resource="manager.xml"/>
-        <import resource="decorator.xml"/>
-        <import resource="appellation.xml"/>
-    </imports>
     <parameters>
         <parameter key="lyssal.geography.entity.administrative_area.class">Lyssal\GeographyBundle\Entity\AdministrativeArea</parameter>
         <parameter key="lyssal.geography.entity.city.class">Lyssal\GeographyBundle\Entity\City</parameter>
