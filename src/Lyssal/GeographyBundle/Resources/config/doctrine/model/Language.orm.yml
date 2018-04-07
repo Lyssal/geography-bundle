@@ -1,0 +1,29 @@
+Lyssal\GeographyBundle\Entity\Language:
+    type: entity
+
+    id:
+        id:
+            type: smallint
+            generator:
+                strategy: AUTO
+
+    fields:
+        name:
+            type: string
+            length: 32
+            nullable: false
+        code:
+            type: string
+            length: 2
+            nullable: true
+        culture:
+            type: string
+            length: 5
+            nullable: true
+
+    manyToOne:
+        country:
+            targetEntity: Country
+            inversedBy: languages
+            nullable: false
+            onDelete: CASCADE

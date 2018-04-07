@@ -1,0 +1,54 @@
+Lyssal\GeographyBundle\Entity\City:
+    type: entity
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        name:
+            type: string
+            length: 128
+            nullable: false
+        code:
+            type: string
+            length: 5
+            nullable: true
+        latitude:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 8
+        longitude:
+            type: decimal
+            nullable: true
+            precision: 10
+            scale: 8
+        description:
+            type: string
+            length: 255
+            nullable: true
+        website:
+            type: string
+            length: 255
+            nullable: true
+        gentile:
+            type: string
+            length: 32
+            nullable: true
+
+    manyToOne:
+        subAdministrativeArea:
+            targetEntity: SubAdministrativeArea
+            inversedBy: cities
+            nullable: false
+            onDelete: CASCADE
+
+    manyToMany:
+        postalCodes:
+            targetEntity: PostalCode
+            mappedBy: cities
+            cascade:
+                - persist

@@ -1,0 +1,4 @@
+Lyssal\Geography\Model\Country:
+    properties:
+        name:
+            NotBlank: ~

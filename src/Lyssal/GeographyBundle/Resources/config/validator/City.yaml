@@ -1,0 +1,4 @@
+Lyssal\Geography\Model\City:
+    properties:
+        name:
+            NotBlank: ~

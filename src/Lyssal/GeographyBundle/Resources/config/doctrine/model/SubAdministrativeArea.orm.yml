@@ -1,0 +1,30 @@
+Lyssal\GeographyBundle\Entity\SubAdministrativeArea:
+    type: entity
+
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+
+    fields:
+        name:
+            type: string
+            length: 255
+            nullable: false
+        code:
+            type: string
+            length: 3
+            nullable: true
+
+    manyToOne:
+        administrativeArea:
+            targetEntity: AdministrativeArea
+            inversedBy: subAdministrativeAreas
+            nullable: false
+            onDelete: CASCADE
+
+    oneToMany:
+        cities:
+            targetEntity: City
+            mappedBy: departement

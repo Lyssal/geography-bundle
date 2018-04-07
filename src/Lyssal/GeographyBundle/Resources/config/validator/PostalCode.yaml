@@ -1,0 +1,4 @@
+Lyssal\Geography\Model\PostalCode:
+    properties:
+        code:
+            NotBlank: ~

@@ -1,0 +1,4 @@
+Lyssal\Geography\Model\Language:
+    properties:
+        name:
+            NotBlank: ~

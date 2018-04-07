@@ -18,7 +18,6 @@ use Lyssal\Dsv\Csv;
 use Lyssal\GeographyBundle\Entity\Country;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Bridge\Doctrine\RegistryInterface;
-use Symfony\Component\Config\FileLocatorInterface;
 use Lyssal\GeographyBundle\Manager\PostalCodeManager;
 use Lyssal\GeographyBundle\Manager\CountryManager;
 use Lyssal\GeographyBundle\Manager\AdministrativeAreaManager;

@@ -1,0 +1,4 @@
+Lyssal\Geography\Model\AdministrativeArea:
+    properties:
+        name:
+            NotBlank: ~

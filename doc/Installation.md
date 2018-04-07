@@ -14,178 +14,12 @@
 composer update
 ```
 
-3. Create your `GeographyBundle` (optional)
+3. Redefine parameters
 
-```php
-namespace Acme\GeographyBundle;
+Only if you want to extend classes.
+Look at parameters in the config directory.
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
-
-/**
- * {@inheritDoc}
- */
-class AcmeGeographyBundle extends Bundle
-{
-    /**
-     * {@inheritDoc}
-     */
-    public function getParent()
-    {
-        return 'LyssalGeographyBundle';
-    }
-}
-```
-
-4. Create your entities
-
-For example:
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Lyssal\GeographyBundle\Entity\Country as LyssalCountry;
-use Doctrine\ORM\Mapping\UniqueConstraint;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity()
- * @ORM\Table()
- */
-class Country extends LyssalCountry
-{
-    /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     * 
-     * @ORM\OneToMany(targetEntity="AdministrativeArea", mappedBy="country")
-     */
-    protected $administrativeAreas;
-}
-```
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Lyssal\GeographyBundle\Entity\AdministrativeArea as LyssalAdministrativeArea;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity()
- * @ORM\Table()
- */
-class AdministrativeArea extends LyssalAdministrativeArea
-{
-    /**
-     * @var \Acme\GeographyBundle\Entity\Country
-     * 
-     * @ORM\ManyToOne(targetEntity="Country", inversedBy="administrativeAreas")
-     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
-     */
-    protected $country;
-    
-    /**
-     * @ORM\OneToMany(targetEntity="SubAdministrativeArea", mappedBy="administrativeArea")
-     */
-    protected $subAdministrativeAreas;
-}
-```
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Lyssal\GeographyBundle\Entity\SubAdministrativeArea as LyssalSubAdministrativeArea;
-use Doctrine\ORM\Mapping\UniqueConstraint;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity(repositoryClass="\Lyssal\GeographyBundle\Repository\SubAdministrativeAreaRepository")
- * @ORM\Table()
- */
-class SubAdministrativeArea extends LyssalSubAdministrativeArea
-{
-    /**
-     * @var \Acme\GeographyBundle\Entity\AdministrativeArea
-     * 
-     * @ORM\ManyToOne(targetEntity="AdministrativeArea", inversedBy="subAdministrativeAreas")
-     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
-     */
-    protected $administrativeArea;
-    
-    /**
-     * @var \Doctrine\Common\Collections\ArrayCollection
-     * 
-     * @ORM\OneToMany(targetEntity="City", mappedBy="subAdministrativeArea")
-     */
-    protected $cities;
-}
-```
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Lyssal\GeographyBundle\Entity\City as LyssalCity;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity()
- * @ORM\Table()
- */
-class City extends LyssalCity
-{
-    /**
-     * @var \Acme\GeographyBundle\Entity\SubAdministrativeArea
-     * 
-     * @ORM\ManyToOne(targetEntity="SubAdministrativeArea", inversedBy="cities")
-     * @ORM\JoinColumn(nullable=false, onDelete="CASCADE")
-     */
-    protected $subAdministrativeArea;
-}
-```
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
-use Lyssal\GeographyBundle\Entity\PostalCode as LyssalPostalCode;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity()
- * @ORM\Table()
- */
-class PostalCode extends LyssalPostalCode
-{
-    
-}
-```
-
-```php
-namespace Acme\GeographyBundle\Entity;
-
-use Lyssal\GeographyBundle\Entity\Language as LyssalLanguage;
-use Doctrine\ORM\Mapping as ORM;
-
-/**
- * {@inheritDoc}
- * 
- * @ORM\Entity()
- * @ORM\Table()
- */
-class Language extends LyssalLanguage
-{
-    
-}
-```
-
-5. Redefine parameters
+For example for entities:
 
 ```xml
 <?xml version="1.0" ?>
@@ -202,7 +36,7 @@ class Language extends LyssalLanguage
 </container>
 ```
 
-6. Other configurations
+4. Other configurations
 
 If you use the entity managers of `LyssalDoctrineOrmBundle` :
 
